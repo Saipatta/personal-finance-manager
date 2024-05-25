@@ -4,9 +4,8 @@ import { useNavigate } from 'react-router-dom'
 
 import "./Register.css"
 
-export default function Register({setIsLoggedIn}) {
+export default function Register() {
   const navigate = useNavigate();
-  setIsLoggedIn(false);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios.post("http://localhost:3001/api/auth/register", {
